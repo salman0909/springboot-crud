@@ -41,6 +41,14 @@ pipeline{
                 }
             }
         }
+        stage('Deploying the image into k8s'){
+            steps{
+                script{
+                    withKubeConfig(clusterName: 'eoc-kubemaster', credentialsId: 'k8s-pwd', serverUrl: '192.168.100.11') {
+                    sh 'kubectl apply -f sb-app-deployment.yml'
+                    sh 'kubectl apply -f sb-app-service.yml'
+    
+}
                     
         
     }
