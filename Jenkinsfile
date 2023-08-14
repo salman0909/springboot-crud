@@ -37,7 +37,7 @@ pipeline{
         stage('Running the Container'){
             steps{
                 script{
-                    sh 'docker run -d -p 8081:8081 --name sb-crud01 $dockerImageTag'
+                    sh 'docker run -d -p 8081:8081 --name sb-crud $dockerImageTag'
                 }
             }
         }
