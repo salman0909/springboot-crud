@@ -3,7 +3,7 @@ pipeline{
     agent any
     environment {
         dockerhubCredentials = 'dockerhub-credentials'
-        dockerImageTag = "salman1091/springboot-crud:v1
+        dockerImageTag = "salman1091/springboot-crud
     }
     tools{
         maven "maven_3_9_4"
