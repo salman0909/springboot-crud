@@ -20,6 +20,11 @@ pipeline{
                     sh 'docker build -t salman1091/springboot-crud .'
                 }
             }
-        }    
+        } 
+        stage('Pushing Docker image to DockerHub'){
+            steps{
+                script{
+                    
+        
     }
 }
