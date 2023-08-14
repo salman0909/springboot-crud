@@ -1,6 +1,10 @@
 pipeline{
     
     agent any
+    environment {
+        dockerhubCredentials = 'dockerhub-credentials'
+        dockerImageTag = "salman1091/springboot-crud:${BUILD_TAG.toLowerCase()}"
+    }
     tools{
         maven "maven_3_9_4"
     }
@@ -24,6 +28,12 @@ pipeline{
         stage('Pushing Docker image to DockerHub'){
             steps{
                 script{
+                    docker.withRegistry('', dockerhubCredentials) {
+                        sh "docker push $dockerImageTag"
+                    }
+                }
+            }
+        }
                     
         
     }
