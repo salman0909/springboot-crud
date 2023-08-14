@@ -37,7 +37,7 @@ pipeline{
         stage('Running the Container'){
             steps{
                 script{
-                    sh 'docker run -d -p 8000:8000 $dockerImageTag'
+                    sh 'docker run -d -p 8000:8080 $dockerImageTag'
                 }
             }
         }
