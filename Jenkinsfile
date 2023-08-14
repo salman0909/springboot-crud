@@ -20,7 +20,6 @@ pipeline{
                     sh 'docker build -t salman1091/springboot-crud .'
                 }
             }
-        }
-            
+        }    
     }
 }
