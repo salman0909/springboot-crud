@@ -14,6 +14,10 @@ pipeline{
                 }
             }
         }
+        stage('Building Docker Image'){
+            steps{
+                script{
+                    sh 'docker build -t salman1091/springboot-crud .'
             
     }
 }
