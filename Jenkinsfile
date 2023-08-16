@@ -48,7 +48,7 @@ pipeline{
                 sh 'kubectl apply -f sb-app-deployment.yml'
                 //sh 'kubectl create service sb-app-service.yml --image=springboot-crud'
                 //sh 'kubectl describe service sb-app-service.yml'
-                //sh 'kubectl apply -f sb-app-service.yml'
+                sh 'kubectl apply -f sb-app-service.yml'
             }
         }           
     }
