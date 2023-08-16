@@ -4,7 +4,7 @@ spring:
   datasource:
     driverClassName: org.h2.Driver
     password: sa
-    url: jdbc:h2:tcp://192.168.100.11:44031/~/test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL
+    url: jdbc:h2:tcp://192.168.100.11:39043/~/test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL
     username: sa
   h2:
     console:
