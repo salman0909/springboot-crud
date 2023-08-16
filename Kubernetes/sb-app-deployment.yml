@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-boot-k8s-deployment
+  name: sb-app-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: spring-boot-k8s
+      app: sb-app
   template:
     metadata:
       labels:
-        app: spring-boot-k8s
+        app: sb-app
     spec:
       containers:
         - name: sb-crud
