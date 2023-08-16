@@ -43,14 +43,13 @@ pipeline{
         }
         stage('Deploying the image into k8s'){
             steps{
-                script{
-                    sh 'kubectl create deployment sb-app-deployment --image=springboot-crud'
-                    //sh 'kubectl describe deployment sb-app-deployment.yml'
-                    sh 'kubectl apply -f /opt/jenkins/workspace/app-deployment/sb-app-deployment.yml'
-                    sh 'kubectl create service sb-app-service.yml --image=springboot-crud'
-                    sh 'kubectl describe service sb-app-service.yml'
-                    sh 'kubectl apply -f sb-app-service.yml'
-                }
+                //sh 'kubectl create deployment sb-app-deployment --image=springboot-crud'
+                //sh 'kubectl describe deployment sb-app-deployment.yml'
+                sh 'kubectl apply -f sb-app-deployment.yml'
+                //sh 'kubectl create service sb-app-service.yml --image=springboot-crud'
+                //sh 'kubectl describe service sb-app-service.yml'
+                sh 'kubectl apply -f sb-app-service.yml'
+
             }
         }           
     }
