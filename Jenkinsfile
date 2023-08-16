@@ -44,11 +44,11 @@ pipeline{
         stage('Deploying the image into k8s'){
             steps{
                 script{
-                    def kubeconfig = '/etc/kubernetes/kubelet.conf'
+                    //def kubeconfig = '/etc/kubernetes/kubelet.conf'
                     def deploymentYaml = 'springboot-crud/Kubernetes/sb-app-deployment.yml'
                     // Change directory to the repository root
                     dir('springboot-crud') {
-                        sh "--kubeconfig=${kubeconfig} apply -f ${deploymentYaml}"
+                        sh "kubectl apply -f ${deploymentYaml}"
                 //sh 'kubectl create deployment sb-app-deployment --image=springboot-crud'
                 //sh 'kubectl describe deployment sb-app-deployment.yml'
                 //sh 'kubectl apply -f sb-app-deployment.yml'
