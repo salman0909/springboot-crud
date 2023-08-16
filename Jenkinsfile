@@ -45,7 +45,7 @@ pipeline{
             steps{
                 script{
                     //def kubeconfig = '/etc/kubernetes/kubelet.conf'
-                    def deploymentYaml = 'springboot-crud/Kubernetes/sb-app-deployment.yml'
+                    def deploymentYaml = '/opt/jenkins/workspace/sb-app-deployment/sb-app-deployment.yml'
                     // Change directory to the repository root
                     dir('springboot-crud') {
                         sh "kubectl apply -f ${deploymentYaml}"
