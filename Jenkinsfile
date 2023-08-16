@@ -44,8 +44,8 @@ pipeline{
         stage('Deploying the image into k8s'){
             steps{
                 script{
-                    sh 'kubectl apply -f sb-app-deployment.yml'
-                    sh 'kubectl apply -f sb-app-service.yml'
+                    sh 'kubectl apply -f springboot-crud/Kubernetes/sb-app-deployment.yml'
+                    sh 'kubectl apply -f springboot-crud/Kubernetes/sb-app-service.yml'
                 }
             }
         }           
