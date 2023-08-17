@@ -5,7 +5,7 @@ spring:
     driverClassName: org.h2.Driver
     url: jdbc:h2:tcp://192.168.100.11:9092/~/mydb
     username: sa
-    password: sa
+
   h2:
     console:
       enabled: true
