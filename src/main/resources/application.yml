@@ -1,19 +1,38 @@
+#server:
+ # port: 8081
+#spring:
+  #datasource:
+   # driverClassName: org.h2.Driver
+   # url: jdbc:h2:tcp://192.168.100.11:9092/~/mydb
+  #  username: sa
+
+ # h2:
+    #console:
+     # enabled: true
+    #  settings:
+   #     web-allow-others: true
+  #      tcp-allow-others: true
+  #jpa:
+    #database-platform: org.hibernate.dialect.H2Dialect
+   # hibernate:
+     # ddl-auto: update
+    #  naming:
+   #     physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  #mvc:
+ #   pathmatch:
+#      matching-strategy: ANT_PATH_MATCHER
+
+
 server:
   port: 8081
 spring:
   datasource:
-    driverClassName: org.h2.Driver
-    url: jdbc:h2:tcp://192.168.100.11:9092/~/mydb
-    username: sa
-
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: true
-        tcp-allow-others: true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
       naming:
